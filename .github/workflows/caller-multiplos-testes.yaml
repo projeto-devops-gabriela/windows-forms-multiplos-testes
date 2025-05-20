@@ -16,5 +16,5 @@ jobs:
     uses: projeto-devops-gabriela/esteiras-devops/.github/workflows/esteira-teste-conexao.yaml@main
     with:
       project-type: 'WindowsFormsApp'
-      build-configuration: 'Release'
+      build-configuration: Release
     secrets: inherit
