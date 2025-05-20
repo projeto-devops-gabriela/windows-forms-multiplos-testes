@@ -1,0 +1,20 @@
+name: caller-multiplos-testes
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  call-class-library:
+    uses: projeto-devops-gabriela/esteiras-devops/.github/workflows/esteira-teste-conexao.yaml@main
+    with:
+      project-type: 'WindowsFormsApp'
+      build-configuration: Release
+    secrets: inherit
